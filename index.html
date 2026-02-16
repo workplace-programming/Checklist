@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ego OTS Checklist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Ego OTS Checklist</h1>
+</header>
+
+<div class="container">
+
+    <div id="mainMenu" class="menu">
+        <button onclick="showSection('attempter')">Attempter Checklist</button>
+        <button onclick="showSection('reviewer')">Reviewer Checklist</button>
+    </div>
+
+    <!-- Attempter Section -->
+    <div id="attempterSection" class="checklist-section">
+        <h2>Attempter Checklist</h2>
+
+        <h3>
+            BEFORE SUBMIT
+        </h3>
+
+        <div id="attempterChecklist"></div>
+
+        <h3>
+            Remember always uses the Quality Assistant every time you make a modification in the task.
+        </h3>
+
+        <button class="reset-btn" onclick="resetChecklist('attempterChecklist')">Reset Checklist</button>
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <!-- Reviewer Section -->
+    <div id="reviewerSection" class="checklist-section">
+        <h2>Reviewer Checklist</h2>
+
+        <div class="info-box" contenteditable="true">
+        </div>
+
+        <div id="reviewerChecklist"></div>
+
+        <button class="reset-btn" onclick="resetChecklist('reviewerChecklist')">Reset Checklist</button>
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
