@@ -42,16 +42,8 @@ function generateChecklist(containerId, dataSource) {
         checkbox.type = "checkbox";
         checkbox.title = item.hover;
 
-        div.appendChild(label);
-        div.appendChild(checkbox);
-        container.appendChild(div);
-
         checkbox.addEventListener("change", () => {
-            if (checkbox.checked) {
-                label.classList.add("striked");
-            } else {
-                label.classList.remove("striked");
-            }
+            label.classList.toggle("striked", checkbox.checked);
         });
 
         div.appendChild(label);
@@ -89,4 +81,5 @@ function resetChecklist(containerId) {
         const infoBoxes = section.querySelectorAll(".info-box");
         infoBoxes.forEach(box => box.innerText = "");
     }
+
 }
