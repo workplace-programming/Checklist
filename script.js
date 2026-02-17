@@ -57,10 +57,12 @@ function showSection(type) {
 
     if (type === "attempter") {
         document.getElementById("attempterSection").style.display = "block";
+        document.getElementById("attempterNotes").style.display = "block";
         generateChecklist("attempterChecklist", checklistDataAttempter);
     }
     if (type === "reviewer") {
         document.getElementById("reviewerSection").style.display = "block";
+        document.getElementById("attempterNotes").style.display = "none";
         generateChecklist("reviewerChecklist", checklistDataReviewer);
     }
 }
@@ -69,6 +71,7 @@ function goBack() {
     document.getElementById("mainMenu").style.display = "flex";
     document.getElementById("attempterSection").style.display = "none";
     document.getElementById("reviewerSection").style.display = "none";
+    document.getElementById("attempterNotes").style.display = "none";
 }
 
 function resetChecklist(containerId) {
@@ -83,3 +86,4 @@ function resetChecklist(containerId) {
     }
 
 }
+
