@@ -80,9 +80,13 @@ function resetChecklist(containerId) {
     const checkboxes = container.querySelectorAll("input[type='checkbox']");
     checkboxes.forEach(cb => cb.checked = false);
 
+    const labels = container.querySelectorAll("span");
+    labels.forEach(label => label.classList.remove("striked"));
+
     const section = container.closest(".checklist-section");
     if (section) {
         const infoBoxes = section.querySelectorAll(".info-box");
         infoBoxes.forEach(box => box.innerText = "");
     }
 }
+
