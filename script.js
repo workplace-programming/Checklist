@@ -52,6 +52,7 @@ function generateChecklist(containerId, dataSource) {
     });
 }
 
+
 function showSection(type) {
     document.getElementById("mainMenu").style.display = "none";
 
@@ -84,7 +85,4 @@ function resetChecklist(containerId) {
         const infoBoxes = section.querySelectorAll(".info-box");
         infoBoxes.forEach(box => box.innerText = "");
     }
-
 }
-
-
