@@ -89,4 +89,29 @@ header {
 
 h3 {
     color: #e84118;
+
+}
+
+.notes-window {
+    position: fixed;
+    left: 20px;
+    top: 140px;
+    width: 260px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    padding: 18px;
+    display: none;
+    z-index: 1000;
+}
+
+.notes-window h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.notes-window p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;    
 }
